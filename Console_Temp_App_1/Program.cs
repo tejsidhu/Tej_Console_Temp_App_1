@@ -1,63 +1,40 @@
-﻿//test Branch 1-2
-
-using System;
+﻿using System;
 
 namespace Console_Temp_App_1
 {
-    //Example 1: Constructors
-    /*
-    abstract class A
-    {
-        protected A() { Console.WriteLine("Abstract class constructor"); }
-    }
-    //Derived class
-    class B : A
-    {
-        public B() { Console.WriteLine("Derived class constructor"); }
-    }
-
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            B obj = new B();
-        }
-    }
-    */
+            //1. Constructor class demo
+            //ConstructorDemo.B objBClass = new ConstructorDemo.B();
 
-    //Example 2: Delegate evolution
-    public class test
-    {
-        delegate void TestDelegate(string s);
-        static void M(string s)
-        {
-            Console.WriteLine(s);
-        }
+            //2. Delegate Class demo
+            /*
+            Delegate dgate = new Delegate();
+            dgate.CallDelegate();
+            */
 
-        static void Main(string[] args)
-        {
-            // Original delegate syntax required 
-            // initialization with a named method.
-            TestDelegate testDelA = new TestDelegate(M);
+            //3. USING statement demo on file IO operations
+            /*
+            FileIO_With_USING_Directive fileIO = new FileIO_With_USING_Directive();
+            fileIO.CreateAndReadFile();
+            */
 
-            // C# 2.0: A delegate can be initialized with
-            // inline code, called an "anonymous method." This
-            // method takes a string as an input parameter.
-            TestDelegate testDelB = delegate (string s) { Console.WriteLine(s); };
+            //4. String Manipulation
+            //StringManipulation sm = new StringManipulation();
+            //Console.WriteLine(sm.SubString("quick", 0, 2));
+            //Console.WriteLine(sm.SubString("brown", 2, 1));
+            //Console.WriteLine(sm.SubString("fox", 1, 9));
+            //Console.WriteLine(sm.SubString("jumped", -1, 4));
+            //Console.WriteLine(sm.SubString("lazy", 3, 0));
+            //Console.WriteLine(sm.SubString("dog", 1, 1));
 
-            // C# 3.0. A delegate can be initialized with
-            // a lambda expression. The lambda also takes a string
-            // as an input parameter (x). The type of x is inferred by the compiler.
-            TestDelegate testDelC = (x) => { Console.WriteLine(x); };
-
-            // Invoke the delegates.
-            testDelA("Hello. My name is M and I write lines.");
-            testDelB("That's nothing. I'm anonymous and ");
-            testDelC("I'm a famous author.");
-
-            // Keep console window open in debug mode.
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
+            //5. Check Digit
+            CheckDigit cd = new CheckDigit();
+            //Console.WriteLine("The check Digit of 111 is: " + cd.FindCheckDigit(111));
+            //Console.WriteLine("The check Digit of 876 is: " + cd.FindCheckDigit(876));
+            Console.WriteLine("The check Digit of 2 is: " + cd.FindCheckDigit(2));
         }
     }
 }
