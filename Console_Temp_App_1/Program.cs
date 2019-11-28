@@ -33,8 +33,7 @@ namespace Console_Temp_App_1
             //5. Check Digit
             CheckDigit cd = new CheckDigit();
             //Console.WriteLine("The check Digit of 111 is: " + cd.FindCheckDigit(111));
-            //Console.WriteLine("The check Digit of 876 is: " + cd.FindCheckDigit(876));
-            Console.WriteLine("The check Digit of 2 is: " + cd.FindCheckDigit(2));
+            //Console.WriteLine("The check Digit of 876 is: " + cd.FindCheckDigit(876));            
         }
     }
 }
